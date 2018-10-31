@@ -1,0 +1,92 @@
+Steps for running this program
+----------------------------------------
+in case of Oracle10g
+
+A. DATABASE:
+---------------------
+1. Login into the oracle database with
+	username=system  
+	password=manager 
+	
+
+2. Type the following commands on sql> prompt
+	create user scott identified by tiger;
+	grant connect,resource,dba to dmms;
+
+
+4. take the file cargo28nov08.dmp from Database folder from your cd
+       i. paste it into  D: (some drive for example)
+       ii. open command prompt and enter into D: drive ( if you paste cargo28nov08.dmp into D: drive)
+           type the following command
+       D:\>imp scott/tiger file="cargo28nov08.dmp" full="y"       (press Enter key)
+            
+          (Note:  then, Entire tables and their data is copied into dmms user)
+
+5.    to connect with the dmms user  type  the following  command at the sql> 
+        	connect scott/tiger
+
+
+B. DSN(Data Source Name):
+--------------------------------------
+
+1. To run this project we need to create a DSN with the name "mydsn".
+     DSN is required to establish a connection between oracle database and JAVA program.
+
+2. To create DSN follow the path:
+	Start -> Settings -> Controlpannel -> Administrative tools -> Data sources
+	click on ADD button.
+		select "ODBC for ORACLE Driver "
+		click Finish button
+		enter DSN name as "mydsn"
+		enter the hostname if required
+		click OK button
+	click on OK button
+    Datasource will be created.
+
+D. Deployment:
+---------------------
+
+1. Place the dmms folder in the following path
+	for TOMCAT (Web server):
+	------------------------------------
+	c:\Tomcat6.0\webapps\
+	
+	for WEBLOGIC (Application server):
+	--------------------------------------------------
+	c:\bea\weblogic700\samples\server\config\examples\applications\
+
+E. Run the webserver or application server as follows:
+------------------------------------------------------------------------
+	for TOMCAT:
+	-------------------
+	c:\Tomcat6.\bin\tomcat6
+	
+	for WEBLOGIC:
+	----------------------
+	c:\bea\weblogic700\samples\server\config\examples\startexamplesserver.cmd
+
+F. Execution of the program:
+--------------------------------------
+	Type the following on Internet Explorer
+	for TOMCAT:
+	-------------------
+	http://localhost/65535/cargo
+	
+	for WEBLOGIC:
+	-------------------
+	http://localhost/7001/DMMS
+	
+	
+G. Login window appears.Now you can proceed with the project.
+
+    all the best
+====================================================================
+
+  
+            
+
+
+
+      
+         
+       

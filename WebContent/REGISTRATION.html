@@ -1,0 +1,117 @@
+<html>
+<head>
+<style type="text/css">
+body,html { 
+  background: url(http://nttoman.com/wp-content/uploads/2017/02/NTT-Cargo-1.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}</style>
+<script language="javascript">
+function fun1(f2)
+{
+	if(document.f2.t1.value=="")
+	{
+		alert("U HAVE TO ENTER USERNAME");
+		document.f2.t1.focus();
+		return false;
+}
+
+
+if(document.f2.t2.value=="")
+	{
+		alert("U HAVE TO ENTER PASSWORD");
+		document.f2.t2.focus();
+	return false;
+	}
+if(document.f2.type.value=="")
+	{
+		alert("U HAVE TO ENTER CONFIRMATION PASSWORD");
+		document.f2.type.focus();
+		return false;
+	}
+if(document.f2.dob.value=="")
+	{
+		alert("U HAVE TO ENTER DATEOFBIRTH");
+		document.f2.dob.focus();
+		return false;
+	}
+if(document.f2.cno.value=="")
+	{
+		alert("U HAVE TO ENTER CONTACT NUMBER");
+		document.f2.cno.focus();
+		return false;
+
+}
+if(document.f2.email.value!="")
+	{
+		var reg=/^(([\-\w]+)\.?)+@(([\-\w]+)\.?)+\.[a-zA-Z]{2,4}$/
+		if(reg.test(document.f2.email.value))
+		{
+		return true;
+		}
+		else
+		{
+				alert("INVALID EMAILID");
+				document.f2.email.focus();
+				return false;
+		}
+	}
+		else
+		{	
+		alert("ENTER VALID EMAILID")
+		document.f2.email.focus();
+		return false;
+		}
+
+if(document.f2.raw1.value=="")
+	{
+		alert("U HAVE TO ENTER RAWMATERIAL DETAILS");
+		document.f2.raw1.focus();
+		return false;
+	}
+if(document.f2.add.value=="")
+	{
+		alert("U HAVE TO ENTER USERNAME");
+		document.f2.add.focus();
+		return false;
+
+}
+}
+</script>
+
+  <p><img src="C:\Users\hp\Desktop\1919\apache-tomcat-9.0.10\webapps\images\IS356-024[1].jpg" width="" height="251" alt="REGISTRATION FORM" style="float:right;padding:5px;border:0;" /><a name=""><strong></strong></a></p>
+ </head>
+<body>
+    <form name=f2 method="post" action="registration.jsp" onSubmit="return fun1(this)">
+    <table align="center">
+           <center><h3><b>REGISTRATION FORM</b></h3></center><br><br>
+		               <tr><td>USER ID:</td><td><input type="text" name="t1"></td></tr>
+			<tr><td>PASSWORD:</td><td><input type="password" name="t2"></td></tr>
+            <tr><td> TYPE OF ROLE:</td><td><select name="type">
+            									<option>vendor</option>
+            									<option>cargomanager</option>
+            									<option>inspectionmanager</option>
+            									<option>storagemanager</option>
+            									<option>billpayable</option>
+            									<option>manufacturer</option>
+            									</select></td></tr>
+             <tr><td>GENDER:</td><td><input type="radio" name="gender" value=male>male</td><td><input type=radio name="gender" value=female>female
+             <tr><td>DATE OF BIRTH:</td><td><input type="text" name="dob"></td></tr>
+             <tr><td>CONTACT NUMBER:</td><td><input type="text" name="cno"></td></tr>
+             <tr><td>EMAIL-ID:</td><td><input type="text" name="email"></td></tr>
+              <tr><td>LEVEL OF QUALITY:</td><td><select name="qua1" >
+                                                  <option >2</option>
+                                                    <option>3</option>
+                                                       <option>4</option>
+                                                   <option>5</option></select></td></tr>
+               <tr><td>RAWMATERIAL DETAILS:</td><td> <input type="text" name="raw1"></td></tr>
+			   <tr><td>ADDRESS:</td><td><input type="text" name="add"></td></tr>
+			   <tr><td><input type="submit" value=SUBMIT  NAME=sub></td></tr>
+                </table>
+				   </form>
+				   </body>
+				   </html>
+                                                                                       
+

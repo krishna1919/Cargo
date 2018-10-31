@@ -1,0 +1,27 @@
+<%@ page language="java" import="java.sql.*"%>
+<HTML>
+<HEAD><center><h3>CARGO MANAGEMENT SYSTEMS</h3></center>
+<TITLE> RAWMATERIAL DETAILS</TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<BODY bgcolor="sky blue">
+<table>
+<% String a=(String)session.getAttribute("uid");%>
+<tr><td>WELCOME:
+<%=a%></td></tr>
+</table>
+<form action ="compose.jsp" method="post">
+<table>
+    <tr><td><h2><center>RAWMATERIAL DETAILS</center></h2></td></tr><br><br>
+<tr><td>RAWMATERIAL:</td><td> <input type="text" name="rawmaterial"></td></tr><br>
+<tr><td>QUANTITY:</td><td><input type="text" name="quantity"></td></tr><br>
+<tr><td>COST:</td><td><input type="text" name="cost"></td></tr><br>
+<tr><td>DATE:</td><td><input type="text" name="date"></td></tr><br>
+<tr><td><input type="submit" value="SEND"></td></tr>
+</table>
+</form>
+</body>
+</HTML>
